@@ -13,5 +13,8 @@ use App\Http\Controllers\OrderController;
 |
 */
 
-Route::get('create', [OrderController::class, 'orderCreation'])
-->name('create.orderCreation');
+Route::get('/', [OrderController::class, 'orderCreation'])
+->name('/.orderCreation');
+
+Route::post('/create', [OrderController::class, 'createOrder'])
+->name('create.createOrder');
